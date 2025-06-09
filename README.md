@@ -1,23 +1,26 @@
-# 🧠 Voice-GPT - 
-## An Offline Transformer-based Voice Assistant
+# 🧠 Voice-GPT
 
-Voice-GPT is a fully offline, desktop-based voice assistant powered by a fine-tuned transformer model — built using Python, ElectronJS, and NodeJS. It understands your speech, processes it using a custom-trained intent recognition model, and executes platform-specific commands — all without requiring an internet connection.
+- Voice-GPT is a **Transformer-based Voice Assistant**
+
+- Voice-GPT is a desktop-based voice assistant powered by a fine-tuned transformer model, which is built using Python, Electron.js and Node.js.
+  
+- It understands your speech, processes it using a custom-trained intent recognition model and executes platform-specific commands.
 
 ---
 
 ## 🚀 Features
 
-- 🎙️ **Voice Input (Speech Recognition)**
+- 🎙️ **Voice Input**
   
-- 🤖 **Transformer-based Intent Detection (HuggingFace)**
+- 🤖 **Transformer-based Intent Detection**
   
-- ⚙️ **Cross-platform Command Execution (Windows/Linux/Mac)**  
+- ⚙️ **Cross-platform Command Execution** 
 
-- 🗣️ **Voice Output (Text-to-Speech)**  
+- 🗣️ **Voice Output**  
 
-- 🖥️ **Desktop GUI (Electron)**  
+- 🖥️ **Desktop-first App**  
 
-- 🔐 **100% Offline – Privacy-Focused**
+- 🔐 **Privacy-Focused**
 
 ---
 
@@ -37,13 +40,13 @@ Voice-GPT is a fully offline, desktop-based voice assistant powered by a fine-tu
 
 1. 🎙️ User speaks a command
 
-2. 🎧 Voice is transcribed → sent to Python backend
+2. 🎧 Voice is transcribed and sent to Python backend
 
 3. 🧠 Transformer model classifies intent
 
-4. 💻 Executes mapped platform-specific command
+4. 💻 Executes the platform-specific command
 
-5. 🗣️ Response is spoken back to the user
+5. 🗣️ Response is spoken back to the user alongwith the execution of the task
 
 ---
 
