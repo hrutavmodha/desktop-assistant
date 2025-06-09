@@ -1,4 +1,5 @@
-# 🧠 Voice-GPT - An Offline Transformer-based Voice Assistant
+# 🧠 Voice-GPT - 
+## An Offline Transformer-based Voice Assistant
 
 Voice-GPT is a fully offline, desktop-based voice assistant powered by a fine-tuned transformer model — built using Python, ElectronJS, and NodeJS. It understands your speech, processes it using a custom-trained intent recognition model, and executes platform-specific commands — all without requiring an internet connection.
 
