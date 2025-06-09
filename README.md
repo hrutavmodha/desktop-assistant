@@ -28,11 +28,11 @@
 
 | Layer         | Stack                             |
 |---------------|------------------------------------|
-| Frontend      | HTML, CSS, Vanilla JS              |
-| Backend       | Python, PyTorch, HuggingFace, OS   |
-| Desktop Shell | ElectronJS, NodeJS                 |
-| Model         | Transformer-based Intent Classifier|
-| Speech        | Web Speech API / pyttsx3           |
+| Frontend      | HTML, CSS, JS and React.js            |
+| Backend       | Node.js, Python and HuggingFace package   |
+| Desktop UI | Electron.js               |
+| Model         | Transformer |
+| Voice I/O       | Web Speech API         |
 
 ---
 
