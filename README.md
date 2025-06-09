@@ -8,7 +8,7 @@
 
 ---
 
-## 🚀 Features
+# 🚀 Features
 
 - 🎙️ **Voice Input**
   
@@ -24,7 +24,7 @@
 
 ---
 
-## 🏗️ Tech Stack
+# 🏗️ Tech Stack
 
 | Layer         | Stack                             |
 |---------------|------------------------------------|
@@ -36,7 +36,7 @@
 
 ---
 
-## 🧠 How It Works
+# 🧠 How It Works
 
 1. 🎙️ User speaks a command
 
@@ -50,7 +50,7 @@
 
 ---
 
-## 🔁 Requirements**
+# 🔁 Requirements
 
 - Node.js & npm
 
@@ -60,16 +60,16 @@
 
 ---
 
-## 🛠️ Run Locally
+# 🛠️ Run Locally
 
-**1. Clone the repository**
+## 1. Clone the repository
 
 ```Bash
 git clone "https://github.com/hrutavmodha/voice-assistant.git"
 cd ./voice-assistant
 ```
 
-**2. Start the training**
+## 2. Start the training
 
 **⚠️ NOTE: For training the model locally, make sure that you have dedicated CUDA GPU with 6GB VRAM and PC RAM 8-16GB, else you can use Google Colab or Kaggle**
 
@@ -79,7 +79,7 @@ python ./train.py
 python ./inference.py "Open Google"
 ```
 
-**3. Install dependencies**
+## 3. Install dependencies
 
 ```Bash
 cd ..
@@ -90,7 +90,7 @@ cd ..
 npm install
 ```
 
-**4. Start the server**
+## 4. Start the server
 
 ```Bash
 npm run start
@@ -98,14 +98,14 @@ npm run start
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 Made with passion by **Hrutav Modha**
 
 ---
 
-## 📌 Note
+# 📌 Note
 
 - This project is purely offline and does **not rely on any of the external APIs** like OpenAI or Google Assistant, **nor it is dumb `if-elif-else`-like rule-based voice-assistant**
 
-- It’s a fully local voice assistant with a custom-trained AI model — designed with privacy and hackability in mind.
+- It’s a fully local voice assistant with a custom-trained AI model, which is designed with keeping privacy in mind.
