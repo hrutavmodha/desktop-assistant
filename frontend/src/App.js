@@ -1,18 +1,7 @@
 import React from "react"
 export default function App() {
   const handleDownload = () => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/download`, {
-      method: "GET",
-      header: {
-        "Content-type": "application/json",
-      }
-    }).then((res) => {
-      return res.json()
-    }).then((data) => {
-      console.log(data)
-    }).catch((error) => {
-      console.log(error)
-    }
+    window.location.href = `${process.env.REACT_APP_BACKEND}/download`
   }
   return (
     <div className = "container">
