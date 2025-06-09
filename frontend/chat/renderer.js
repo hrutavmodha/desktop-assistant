@@ -15,16 +15,19 @@ startBtn.addEventListener("click", async () => {
         botReply.innerText = "Error occurred"
         console.log(err)
         return
+      } else if (stderr) {
+        botReply.innerText = "Error occurred"
+        console.log(stderr)
+        return
       }
-      const response = stdout.trim()
-      botReply.innerText = response
+      botReply.innerText = stdout.trim()
       const synth = window.speechSynthesis
       const utter = new SpeechSynthesisUtterance(response)
       synth.speak(utter)
     })
   }
-  recognition.onerror = function (event) {
-    botReply.innerText = "Voice input failed"
-    console.error(event.error)
+  recognition.onerror = function (e) {
+    botReply.innerText = "Error occurred"
+    console.error(e.error)
   }
 })
