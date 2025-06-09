@@ -1,5 +1,6 @@
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import torch
+import sys
 tokenizer = AutoTokenizer.from_pretrained("backend/model/checkpoint")
 model = AutoModelForSeq2SeqLM.from_pretrained("backend/model/checkpoint")
 def predict(user_input):
@@ -20,8 +21,8 @@ def predict(user_input):
     )
     return result
 if __name__ == "__main__":
-    prompt = input("You: ")
-    if prompt.lower() in ["bye", "go off", "see you later", "see you soon", "goodbye"]:
+    prompt = sys.argv[1].lower()
+    if prompt in ["bye", "go off", "see you later", "see you soon", "goodbye"]:
         print(f"Bot: Bye")
     else:
         print(f"Bot: {predict(prompt)}")
