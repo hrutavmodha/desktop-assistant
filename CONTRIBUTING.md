@@ -1,5 +1,5 @@
 
-# 🤝 Contributing to VoiceGPT (Offline Voice Assistant)
+# 🤝 Contributing to VoiceGPT
 
 Hello! 👋 Thank you for your interest in contributing to VoiceGPT — an open-source offline voice assistant powered by Transformers and NodeJS/Electron.
 
@@ -32,33 +32,38 @@ Hello! 👋 Thank you for your interest in contributing to VoiceGPT — an open-
 
 ## 🛠️ Setup Instructions
 
-1. **Fork** this repository
+**1. *Fork* this repository**
 
-2. Clone it locally:
+**2. Clone it locally**
    ```bash
    git clone "https://github.com/<your-username>/voice-assistant.git"
    ```
 
-3. Install dependencies:
+**3. Install dependencies**
 
-Root:
+**i. Root**
 
+```Bash
 cd voice-assistant
 npm install
+```
 
-Frontend:
+**ii. Frontend**
 
+```Bash
 cd frontend
 npm install
+```
 
-Backend:
+**iii. Backend**
 
+```Bash
 cd backend/model
 pip install transformers pytorch sys
 python train.py
+```
 
-
-4. ✅ Start contributing!
+**4. ✅ Start contributing**
 
 ---
 
@@ -90,14 +95,10 @@ python train.py
 
 1. Push your changes to your fork
 
-
 2. Open a pull request (PR) to main branch
-
 
 3. Describe your changes clearly
 
-
 4. Link any related issues (if any)
-
 
 5. Wait for review and merge 🎉
