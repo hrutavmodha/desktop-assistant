@@ -43,5 +43,7 @@ trainer = Trainer(
     train_dataset = tokenized_dataset
 )
 trainer.train()
+print("Model trained successfully")
 model.save_pretrained("backend/model/checkpoint")
 tokenizer.save_pretrained("backend/model/checkpoint")
+print("Model saved successfully")
