@@ -50,9 +50,7 @@
 
 ---
 
-## 🔧 Setup & Run
-
-**🔁 Requirements**
+## 🔁 Requirements**
 
 - Node.js & npm
 
@@ -108,6 +106,6 @@ Made with passion by **Hrutav Modha**
 
 ## 📌 Note
 
-- This project is purely offline and does not rely on **any of the external APIs** like OpenAI or Google Assistant, **nor it is dumb `if-elif-else`-like rule-based voice-assistant**
+- This project is purely offline and does **not rely on any of the external APIs** like OpenAI or Google Assistant, **nor it is dumb `if-elif-else`-like rule-based voice-assistant**
 
 - It’s a fully local voice assistant with a custom-trained AI model — designed with privacy and hackability in mind.
