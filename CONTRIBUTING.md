@@ -1,18 +1,21 @@
 
 # 🤝 Contributing to VoiceGPT
 
-Hello! 👋 Thank you for your interest in contributing to VoiceGPT — an open-source offline voice assistant powered by Transformers and NodeJS/Electron.
+Hello! 👋 Thank you for your interest in contributing to VoiceGPT - an open-source voice assistant powered by Transformers, Node.js and Electron.js.
 
 ---
 
 # 🧠 What's Inside This Project
 
 - 🎙️ Voice Input via Web Speech API
+  
 - 🤖 Intent Recognition using Transformers (HuggingFace)
+  
 - 🗣️ Speech Output using SpeechSynthesis
+  
 - ⚙️ OS Command Execution (Windows, Linux, Mac)
+  
 - 🖥️ Electron GUI + NodeJS Bridge
-- 🔐 100% Offline Architecture
 
 ---
 
@@ -20,12 +23,18 @@ Hello! 👋 Thank you for your interest in contributing to VoiceGPT — an open-
 
 ## ✅ You Can Contribute In:
 
-- Improving **training data quality** (`data.json`)
+- Improving **training data quality**
+  
 - Adding new **command intents + variations**
+  
 - Enhancing **frontend UI/UX**
+  
 - Adding **new OS-level automations**
+  
 - Bug fixes and performance improvements
+
 - Writing **tests**, optimization scripts or installation setup
+
 - Adding **new platform support**
 
 ---
@@ -35,6 +44,7 @@ Hello! 👋 Thank you for your interest in contributing to VoiceGPT — an open-
 **1. *Fork* this repository**
 
 **2. Clone it locally**
+
    ```bash
    git clone "https://github.com/<your-username>/voice-assistant.git"
    ```
@@ -71,9 +81,9 @@ python train.py
 
 1. Use clear, modular code
 
-2. JS: ES6+ preferred (const, let, arrow functions)
+2. ES6+ is preferred
 
-3. Python: Follow PEP8
+3. Python follows PEP8
 
 4. Use meaningful commit messages
 
