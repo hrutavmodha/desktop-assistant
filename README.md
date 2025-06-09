@@ -60,7 +60,9 @@
 
 - Electron.js & React
 
-### 🛠️ Run Locally
+---
+
+## 🛠️ Run Locally
 
 **1. Clone the repository**
 
@@ -100,7 +102,7 @@ npm run start
 
 ## 👨‍💻 Author
 
-Made with passion by Hrutav Modha
+Made with passion by **Hrutav Modha**
 
 ---
 
