@@ -3,7 +3,7 @@ const userText = document.getElementById("userText")
 const botReply = document.getElementById("botReply")
 startBtn.addEventListener("click", async () => {
   const { exec } = require("child_process")
-  await exec(`python ../../backend/model/inference.py ${userText}`, (err, stdout, stderr) => {
+  exec(`python ../../backend/model/inference.py ${userText}`, (err, stdout, stderr) => {
     if (err) {
       botReply.innerText = "Error occurred"
       console.log(err)
