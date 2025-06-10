@@ -76,10 +76,11 @@ loader = DataLoader(
     nn.utils.rnn.pad_sequence([
       x for x,
       _ in b
-    ], 
+    ]
+  ),
     batch_first = True, 
     padding_value = vocab["<pad>"]
-), nn.utils.rnn.pad_sequence([
+    , nn.utils.rnn.pad_sequence([
       y for _, 
       y in b
     ],
