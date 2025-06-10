@@ -68,5 +68,75 @@
       "linux": "gedit",
       "mac": "open -a TextEdit"
     }
+  },
+  {
+    "input": [
+      "Open Stack Overflow",
+      "Launch StackOverflow",
+      "Visit StackOverflow site",
+      "I want to check Stack Overflow",
+      "Go to Stack Overflow"
+    ],
+    "output": {
+      "windows": "start https://stackoverflow.com",
+      "linux": "xdg-open https://stackoverflow.com",
+      "mac": "open https://stackoverflow.com"
+    }
+  },
+  {
+    "input": [
+      "Open VS Code",
+      "Launch Visual Studio Code",
+      "Start code editor",
+      "Open my IDE",
+      "Launch VSCode"
+    ],
+    "output": {
+      "windows": "code",
+      "linux": "code",
+      "mac": "open -a 'Visual Studio Code'"
+    }
+  },
+  {
+    "input": [
+      "Check battery status",
+      "Show battery level",
+      "Battery percentage?",
+      "Tell me my battery",
+      "How much battery is left?"
+    ],
+    "output": {
+      "windows": "WMIC Path Win32_Battery Get EstimatedChargeRemaining",
+      "linux": "acpi -b",
+      "mac": "pmset -g batt"
+    }
+  },
+  {
+    "input": [
+      "Turn off the computer",
+      "Shutdown the system",
+      "Power off",
+      "I want to shut down",
+      "Shut this down"
+    ],
+    "output": {
+      "windows": "shutdown /s /t 1",
+      "linux": "shutdown now",
+      "mac": "sudo shutdown -h now"
+    }
+  },
+  {
+    "input": [
+      "What is today's date?",
+      "Tell me the date",
+      "Give me today’s date",
+      "Date please",
+      "Current date"
+    ],
+    "output": {
+      "windows": "echo %DATE%",
+      "linux": "date +\"%d-%m-%Y\"",
+      "mac": "date +\"%d-%m-%Y\""
+    }
   }
 ]
