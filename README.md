@@ -31,7 +31,7 @@
 | Layer         | Stack                             |
 |---------------|------------------------------------|
 | Frontend      | HTML, CSS, JS and React.js            |
-| Backend       | Node.js, Python and HuggingFace package   |
+| Backend       | Node.js and Python |
 | Desktop UI | Electron.js               |
 | Model         | Light-weight ML model |
 | Voice I/O       | Web Speech API         |
