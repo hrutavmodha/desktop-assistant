@@ -20,7 +20,8 @@ startBtn.addEventListener("click", async () => {
         console.log(stderr)
         return
       }
-      botReply.innerText = stdout.trim()
+      const response = stdout.trim()
+      botReply.innerText = response
       const synth = window.speechSynthesis
       const utter = new SpeechSynthesisUtterance(response)
       synth.speak(utter)
