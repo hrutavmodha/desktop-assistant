@@ -1,8 +1,10 @@
 # 🧠 Voice-GPT
 
-- Voice-GPT is a **Transformer-based Voice Assistant**
+- Voice-GPT is a **ML-based Voice Assistant**
 
-- Voice-GPT is a desktop-based voice assistant powered by a fine-tuned transformer model, which is built using Python, Electron.js and Node.js.
+- Voice-GPT is a desktop-based voice assistant powered by the ML model, which is built using Python.
+
+- The UI is built using Electron.js while inference is done by using Node.js.
   
 - It understands your speech, processes it using a custom-trained intent recognition model and executes platform-specific commands.
 
@@ -10,17 +12,17 @@
 
 # 🚀 Features
 
-- 🎙️ **Voice Input**
+- 🎙️ Voice Input
   
-- 🤖 **Transformer-based Intent Detection**
+- 🤖 ML-based Intent Detection
   
-- ⚙️ **Cross-platform Command Execution** 
+- ⚙️ Cross-platform Command Execution
 
-- 🗣️ **Voice Output**  
+- 🗣️ Voice Output
 
-- 🖥️ **Desktop-first App**  
+- 🖥️ Desktop-first App
 
-- 🔐 **Privacy-Focused**
+- 🔐 Privacy-Focused
 
 ---
 
@@ -31,7 +33,7 @@
 | Frontend      | HTML, CSS, JS and React.js            |
 | Backend       | Node.js, Python and HuggingFace package   |
 | Desktop UI | Electron.js               |
-| Model         | Transformer |
+| Model         | Light-weight ML model |
 | Voice I/O       | Web Speech API         |
 
 ---
@@ -42,7 +44,7 @@
 
 2. 🎧 Voice is transcribed and sent to Python backend
 
-3. 🧠 Transformer model classifies intent
+3. 🧠 The ML model classifies intent
 
 4. 💻 Executes the platform-specific command
 
@@ -71,12 +73,9 @@ cd ./voice-assistant
 
 ## 2. Start the training
 
-**⚠️ NOTE: For training the model locally, make sure that you have dedicated CUDA GPU with 6GB VRAM and PC RAM 8-16GB, else you can use Google Colab or Kaggle**
-
 ```Bash
 cd ./backend/model/
-python ./train.py        
-python ./inference.py "Open Google"
+python ./main.py
 ```
 
 ## 3. Install dependencies
@@ -84,10 +83,12 @@ python ./inference.py "Open Google"
 ```Bash
 cd ..
 npm install
+pip install sklearn
 cd ../frontend
 npm install
 cd ..
 npm install
+cd backend
 ```
 
 ## 4. Start the server
