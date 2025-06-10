@@ -138,5 +138,75 @@
       "linux": "date +\"%d-%m-%Y\"",
       "mac": "date +\"%d-%m-%Y\""
     }
+  },
+  {
+    "input": [
+      "Open GitHub",
+      "Go to GitHub",
+      "Launch GitHub site",
+      "Visit GitHub",
+      "I want to see GitHub"
+    ],
+    "output": {
+      "windows": "start https://github.com",
+      "linux": "xdg-open https://github.com",
+      "mac": "open https://github.com"
+    }
+  },
+  {
+    "input": [
+      "Clear the screen",
+      "Clear terminal",
+      "Wipe terminal display",
+      "Remove terminal clutter",
+      "Blank the screen"
+    ],
+    "output": {
+      "windows": "cls",
+      "linux": "clear",
+      "mac": "clear"
+    }
+  },
+  {
+    "input": [
+      "Who am I?",
+      "Show current user",
+      "What’s my username?",
+      "Tell me my login name",
+      "Who is logged in?"
+    ],
+    "output": {
+      "windows": "echo %USERNAME%",
+      "linux": "whoami",
+      "mac": "whoami"
+    }
+  },
+  {
+    "input": [
+      "Show IP address",
+      "Check my IP",
+      "Get network IP",
+      "Tell me my IP address",
+      "What's my system IP?"
+    ],
+    "output": {
+      "windows": "ipconfig",
+      "linux": "hostname -I",
+      "mac": "ipconfig getifaddr en0"
+    }
+  },
+  {
+    "input": [
+      "Take a screenshot",
+      "Capture the screen",
+      "Snap the current display",
+      "Screenshot now",
+      "Print screen"
+    ],
+    "output": {
+      "windows": "snippingtool",
+      "linux": "gnome-screenshot",
+      "mac": "screencapture screenshot.jpg"
+    }
   }
 ]
