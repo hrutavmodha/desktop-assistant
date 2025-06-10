@@ -47,7 +47,8 @@ class CommandDataset(Dataset):
           dtype = torch.long
         )
         return x, y
-vocab_list = ["<pad>", "<unk>"] + list(set("Open Google".split()))
+data = json.load(open("data.json"))
+vocab_list = ["<pad>", "<unk>"] + list(set(data).split()))
 vocab = {word: i for i, word in enumerate(vocab_list)}
 vocab_size = len(vocab)
 model = CommandTransformer(
