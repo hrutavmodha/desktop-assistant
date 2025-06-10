@@ -1,3 +1,4 @@
+import sys
 import json
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
@@ -13,12 +14,15 @@ vectorizer = TfidfVectorizer()
 X_vec = vectorizer.fit_transform(X)
 model = MultinomialNB()
 model.fit(X_vec, y)
-print("Your Voice Assistant is ready")
 while True:
-    user_input = input("You: ")
-    if user_input.lower() in ["exit", "quit"]:
-        print("Exiting...")
-        break
-    user_vec = vectorizer.transform([user_input])
-    predicted_command = model.predict(user_vec)[0]
-    print(f"Bot: {predicted_command}")
+    user_input = sys.argv[1]
+    if user_input != None:
+        if user_input.lower() in ["exit", "quit", "bye", "go off", "goodbye"]:
+            print("Bye")
+            break
+        else:
+            user_vec = vectorizer.transform([user_input])
+            predicted_command = model.predict(user_vec)[0]
+            print(f"Understood the command: {predicted_command}")
+    else:
+        print("Please provide a proper command")
