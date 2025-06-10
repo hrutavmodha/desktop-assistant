@@ -1,8 +1,8 @@
-# 🧠 Voice-GPT
+# 🧠 Voice-Assistant
 
-- Voice-GPT is a **ML-based Voice Assistant**
+- Voice-Assistant is a **ML-based Voice Assistant**
 
-- Voice-GPT is a desktop-based voice assistant powered by the ML model, which is built using Python.
+- This is a desktop-based voice assistant powered by the ML model, which is built using Python.
 
 - The UI is built using Electron.js while inference is done by using Node.js.
   
@@ -107,6 +107,6 @@ Made with passion by **Hrutav Modha**
 
 # 📌 Note
 
-- This project is purely offline and does **not rely on any of the external APIs** like OpenAI or Google Assistant, **nor it is dumb `if-elif-else`-like rule-based voice-assistant**
+- This project is purely offline and does **not rely on any of the external APIs and nor it is dumb `if-elif-else`-like rule-based voice-assistant**
 
 - It’s a fully local voice assistant with a custom-trained AI model, which is designed with keeping privacy in mind.
