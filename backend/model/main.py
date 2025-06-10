@@ -32,6 +32,7 @@ while True:
         else:
             user_vec = vectorizer.transform([user_input])
             predicted_command = model.predict(user_vec)[0]
-            print(f"Understood the command: {predicted_command}")
+            print("Understood your command. Processing it, it may take few moment. Please wait")
+            os.system(predicted_command)
     else:
         print("Please provide a proper command")
