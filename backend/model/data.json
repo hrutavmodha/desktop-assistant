@@ -390,7 +390,7 @@
       "linux": "rm -rf ~/.local/share/Trash/*",
       "mac": "rm -rf ~/.Trash/*"
     }
-  }
+  },
   {
     "input": [
       "Open new terminal",
