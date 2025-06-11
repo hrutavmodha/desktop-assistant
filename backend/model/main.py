@@ -1,5 +1,7 @@
+from joblib import load
 from handlers.searchGoogle import searchGoogle
 from handlers.wikiSearch import wikiSearch
+model = load("model.pkl")
 while True:
     user_input = sys.argv[1]
     browse = re.search(r"(?:search|look\s*up|google)\s+(.*)", user_input, flags = re.I)
