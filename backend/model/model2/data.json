@@ -26,22 +26,5 @@
       "remind me after <duration>"
     ],
     "output": "timer"
-  },
-  {
-    "input": [
-      "open <app>",
-      "launch <app>",
-      "start <app>"
-    ],
-    "output": "app"
-  },
-  {
-    "input": [
-      "what time is it",
-      "tell me the time",
-      "current time",
-      "say the time"
-    ],
-    "output": "time"
   }
 ]
