@@ -1,7 +1,9 @@
 import sys
 import json
+import re
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
+from handlers.searchGoogle import searchGoogle
 X = y = []
 OS = ""
 if sys.platform == "win32":
@@ -25,14 +27,15 @@ model = MultinomialNB()
 model.fit(X_vec, y)
 while True:
     user_input = sys.argv[1]
-    if user_input != None:
-        if user_input.lower() in ["exit", "quit", "bye", "go off", "goodbye"]:
-            print("Bye")
-            break
-        else:
-            user_vec = vectorizer.transform([user_input])
-            predicted_command = model.predict(user_vec)[0]
-            print("Understood your command. Processing it, it may take few moment. Please wait")
-            os.system(predicted_command)
+    match = re.search(r"(?:search|look\s*up|google)\s+(.*)", user_input, flags = re.I)
+    if user_input.lower() in ["exit", "quit", "bye", "go off", "goodbye"]:
+        print("Bye")
+        break
+    elif match:
+        query = match.group(1)
+        searchGoogle(query)
     else:
-        print("Please provide a proper command")
+        user_vec = vectorizer.transform([user_input])
+        predicted_command = model.predict(user_vec)[0]
+        print("Understood your command. Processing it, it may take few moment. Please wait")
+        os.system(predicted_command)
