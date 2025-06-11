@@ -1,1 +1,534 @@
-
+[
+  {
+    "input": [
+      "Open YouTube",
+      "Launch YouTube",
+      "Can you open YouTube?",
+      "I want to watch YouTube",
+      "Start YouTube in browser"
+    ],
+    "output": {
+      "windows": "start https://youtube.com",
+      "linux": "xdg-open https://youtube.com",
+      "mac": "open https://youtube.com"
+    }
+  },
+  {
+    "input": [
+      "Open Google",
+      "Launch Google search",
+      "Start Google homepage",
+      "Take me to Google",
+      "Search something on Google"
+    ],
+    "output": {
+      "windows": "start https://google.com",
+      "linux": "xdg-open https://google.com",
+      "mac": "open https://google.com"
+    }
+  },
+  {
+    "input": [
+      "What time is it?",
+      "Tell me the current time",
+      "Can you tell me time?",
+      "Give me the time",
+      "Say the time now"
+    ],
+    "output": {
+      "windows": "echo %time%",
+      "linux": "date +\"%T\"",
+      "mac": "date +\"%T\""
+    }
+  },
+  {
+    "input": [
+      "Open file explorer",
+      "Launch explorer window",
+      "Start my computer",
+      "Open folders",
+      "Show me the directory"
+    ],
+    "output": {
+      "windows": "explorer .",
+      "linux": "xdg-open .",
+      "mac": "open ."
+    }
+  },
+  {
+    "input": [
+      "Open Notepad",
+      "Start notepad",
+      "Launch text editor",
+      "Create new text file",
+      "Open a note"
+    ],
+    "output": {
+      "windows": "notepad",
+      "linux": "gedit",
+      "mac": "open -a TextEdit"
+    }
+  },
+  {
+    "input": [
+      "Open Stack Overflow",
+      "Launch StackOverflow",
+      "Visit StackOverflow site",
+      "I want to check Stack Overflow",
+      "Go to Stack Overflow"
+    ],
+    "output": {
+      "windows": "start https://stackoverflow.com",
+      "linux": "xdg-open https://stackoverflow.com",
+      "mac": "open https://stackoverflow.com"
+    }
+  },
+  {
+    "input": [
+      "Open VS Code",
+      "Launch Visual Studio Code",
+      "Start code editor",
+      "Open my IDE",
+      "Launch VSCode"
+    ],
+    "output": {
+      "windows": "code",
+      "linux": "code",
+      "mac": "open -a 'Visual Studio Code'"
+    }
+  },
+  {
+    "input": [
+      "Check battery status",
+      "Show battery level",
+      "Battery percentage?",
+      "Tell me my battery",
+      "How much battery is left?"
+    ],
+    "output": {
+      "windows": "WMIC Path Win32_Battery Get EstimatedChargeRemaining",
+      "linux": "acpi -b",
+      "mac": "pmset -g batt"
+    }
+  },
+  {
+    "input": [
+      "Turn off the computer",
+      "Shutdown the system",
+      "Power off",
+      "I want to shut down",
+      "Shut this down"
+    ],
+    "output": {
+      "windows": "shutdown /s /t 1",
+      "linux": "shutdown now",
+      "mac": "sudo shutdown -h now"
+    }
+  },
+  {
+    "input": [
+      "What is today's date?",
+      "Tell me the date",
+      "Give me today’s date",
+      "Date please",
+      "Current date"
+    ],
+    "output": {
+      "windows": "echo %DATE%",
+      "linux": "date +\"%d-%m-%Y\"",
+      "mac": "date +\"%d-%m-%Y\""
+    }
+  },
+  {
+    "input": [
+      "Open GitHub",
+      "Go to GitHub",
+      "Launch GitHub site",
+      "Visit GitHub",
+      "I want to see GitHub"
+    ],
+    "output": {
+      "windows": "start https://github.com",
+      "linux": "xdg-open https://github.com",
+      "mac": "open https://github.com"
+    }
+  },
+  {
+    "input": [
+      "Clear the screen",
+      "Clear terminal",
+      "Wipe terminal display",
+      "Remove terminal clutter",
+      "Blank the screen"
+    ],
+    "output": {
+      "windows": "cls",
+      "linux": "clear",
+      "mac": "clear"
+    }
+  },
+  {
+    "input": [
+      "Who am I?",
+      "Show current user",
+      "What’s my username?",
+      "Tell me my login name",
+      "Who is logged in?"
+    ],
+    "output": {
+      "windows": "echo %USERNAME%",
+      "linux": "whoami",
+      "mac": "whoami"
+    }
+  },
+  {
+    "input": [
+      "Show IP address",
+      "Check my IP",
+      "Get network IP",
+      "Tell me my IP address",
+      "What's my system IP?"
+    ],
+    "output": {
+      "windows": "ipconfig",
+      "linux": "hostname -I",
+      "mac": "ipconfig getifaddr en0"
+    }
+  },
+  {
+    "input": [
+      "Take a screenshot",
+      "Capture the screen",
+      "Snap the current display",
+      "Screenshot now",
+      "Print screen"
+    ],
+    "output": {
+      "windows": "snippingtool",
+      "linux": "gnome-screenshot",
+      "mac": "screencapture screenshot.jpg"
+    }
+  },
+  {
+    "input": [
+      "Open Control Panel",
+      "Launch system settings",
+      "Open PC settings",
+      "Go to control panel",
+      "Settings khol do"
+    ],
+    "output": {
+      "windows": "control",
+      "linux": "gnome-control-center",
+      "mac": "open /System/Library/PreferencePanes"
+    }
+  },
+  {
+    "input": [
+      "Open downloads",
+      "Show downloaded files",
+      "Take me to downloads folder",
+      "Go to Downloads folder",
+      "Access my downloads"
+    ],
+    "output": {
+      "windows": "start %USERPROFILE%\\Downloads",
+      "linux": "xdg-open ~/Downloads",
+      "mac": "open ~/Downloads"
+    }
+  },
+  {
+    "input": [
+      "Open calculator",
+      "Launch calculator",
+      "Start CalC",
+      "Get me to calculator",
+      "I want CalC"
+    ],
+    "output": {
+      "windows": "calc",
+      "linux": "gnome-calculator",
+      "mac": "open -a Calculator"
+    }
+  },
+  {
+    "input": [
+      "Open browser",
+      "Launch Chrome",
+      "Start web browser",
+      "Open internet",
+      "Show me the web interface"
+    ],
+    "output": {
+      "windows": "start chrome",
+      "linux": "google-chrome",
+      "mac": "open -a Safari"
+    }
+  },
+  {
+    "input": [
+      "Lock the screen",
+      "Lock my computer",
+      "Make sleep the screen",
+      "Lock down the system",
+      "Activate lockscreen"
+    ],
+    "output": {
+      "windows": "rundll32.exe user32.dll,LockWorkStation",
+      "linux": "gnome-screensaver-command -l",
+      "mac": "pmset displaysleepnow"
+    }
+  },
+  {
+    "input": [
+      "Restart the PC",
+      "Reboot system",
+      "Restart this computer",
+      "Reboot the OS",
+      "Reboot the PC"
+    ],
+    "output": {
+      "windows": "shutdown /r /t 0",
+      "linux": "reboot",
+      "mac": "sudo shutdown -r now"
+    }
+  },
+  {
+    "input": [
+      "Put system to sleep",
+      "Enable sleep mode",
+      "Go to sleep",
+      "Sleep the computer",
+      "Shut the PC down temporarily"
+    ],
+    "output": {
+      "windows": "rundll32.exe powrprof.dll,SetSuspendState Sleep",
+      "linux": "systemctl suspend",
+      "mac": "pmset sleepnow"
+    }
+  },
+  {
+    "input": [
+      "Mute the sound",
+      "Turn off audio",
+      "Stop system sound",
+      "Make this system a dumb one",
+      "Do volume 0"
+  ],
+    "output": {
+      "windows": "nircmd.exe mutesysvolume 1",
+      "linux": "amixer -D pulse sset Master mute",
+      "mac": "osascript -e 'set volume output muted true'"
+    }
+  },
+  {
+    "input": [
+      "Open downloads in browser",
+      "Show downloaded files in browser",
+      "Take me to the browser's downloads page",
+      "Launch browser's download history",
+      "Show me the browser downloads page"
+  ],
+    "output": {
+      "windows": "start chrome chrome://downloads",
+      "linux": "google-chrome chrome://downloads",
+      "mac": "open -a Safari chrome://downloads"
+    }
+  },
+  {
+    "input": [
+      "Show desktop",
+      "Minimize all",
+      "Take me to desktop",
+      "Destroy all the tabs",
+      "Go to desktop"
+    ],
+    "output": {
+      "windows": "powershell -command \"(New-Object -ComObject Shell.Application).MinimizeAll()\"",
+      "linux": "xdotool key Super+d",
+      "mac": "osascript -e 'tell application \"System Events\" to keystroke \"F11\"'"
+    }
+  },
+  {
+    "input": [
+      "Turn off WiFi",
+      "Disable wireless network",
+      "Turn off the network",
+      "Take me to WiFi and Off it",
+      "Close the WiFi"
+    ],
+    "output": {
+      "windows": "netsh interface set interface \"Wi-Fi\" disabled",
+      "linux": "nmcli radio wifi off",
+      "mac": "networksetup -setairportpower en0 off"
+    }
+  },
+  {
+    "input": [
+      "Turn on WiFi",
+      "Enable wireless network",
+      "Turn on the WiFi connection",
+      "Start wireless",
+      "Turn on the Internet"
+    ],
+    "output": {
+      "windows": "netsh interface set interface \"Wi-Fi\" enabled",
+      "linux": "nmcli radio wifi on",
+      "mac": "networksetup -setairportpower en0 on"
+    }
+  },
+  {
+    "input": [
+      "Empty recycle bin",
+      "Clear trash",
+      "Delete all junk",
+      "Recycle bin clear karo",
+      "Purge trash"
+    ],
+    "output": {
+      "windows": "PowerShell -Command \"Clear-RecycleBin -Force\"",
+      "linux": "rm -rf ~/.local/share/Trash/*",
+      "mac": "rm -rf ~/.Trash/*"
+    }
+  },
+  {
+    "input": [
+      "Open new terminal",
+      "Launch new command prompt",
+      "Could you launch a new command prompt?",
+      "Start a new terminal window",
+      "I want to use a new terminal"
+    ],
+    "output": {
+      "windows": "start cmd",
+      "linux": "gnome-terminal",
+      "mac": "open -a Terminal"
+    }
+  },
+  {
+    "input": [
+      "Flush DNS",
+      "Clear DNS cache",
+      "Fix internet issues",
+      "Refresh DNS",
+      "Remove DNS records"
+    ],
+    "output": {
+      "windows": "ipconfig /flushdns",
+      "linux": "sudo systemd-resolve --flush-caches",
+      "mac": "sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+    }
+  },
+  {
+  "input": [
+    "Unmute system",
+    "Enable volume",
+    "Turn sound back on",
+    "Restore audio",
+    "Bring back volume"
+  ],
+  "output": {
+    "windows": "nircmd.exe mutesysvolume 0",
+    "linux": "amixer -D pulse sset Master unmute",
+    "mac": "osascript -e 'set volume output muted false'"
+  }
+  },
+  {
+  "input": [
+    "Increase brightness",
+    "Make screen brighter",
+    "Raise screen light",
+    "Add more brightness",
+    "Turn up the brightness"
+  ],
+  "output": {
+    "windows": "powershell (Get-WmiObject -Namespace root/wmi -Class WmiMonitorBrightnessMethods).WmiSetBrightness(1,100)",
+    "linux": "xbacklight -inc 10",
+    "mac": "brightness -v 0.8"
+  }
+  },
+  {
+  "input": [
+    "Decrease brightness",
+    "Lower screen brightness",
+    "Reduce light of display",
+    "Turn down brightness",
+    "Dim the screen"
+  ],
+  "output": {
+    "windows": "powershell (Get-WmiObject -Namespace root/wmi -Class WmiMonitorBrightnessMethods).WmiSetBrightness(1,30)",
+    "linux": "xbacklight -dec 10",
+    "mac": "brightness -v 0.3"
+  }
+  },
+  {
+  "input": [
+    "Show system info",
+    "Tell me my system specs",
+    "Display configuration",
+    "System information",
+    "What is my PC info"
+  ],
+  "output": {
+    "windows": "systeminfo",
+    "linux": "neofetch",
+    "mac": "system_profiler SPHardwareDataType"
+  }
+  },
+  {
+  "input": [
+    "Open documents folder",
+    "Show me my docs",
+    "Take me to documents",
+    "Launch documents directory",
+    "Open my documents"
+  ],
+  "output": {
+    "windows": "explorer shell:Personal",
+    "linux": "xdg-open ~/Documents",
+    "mac": "open ~/Documents"
+  }
+  },
+  {
+  "input": [
+    "Open pictures folder",
+    "Show me my images",
+    "Open photos directory",
+    "Take me to pictures",
+    "Launch image folder"
+  ],
+  "output": {
+    "windows": "explorer shell:My Pictures",
+    "linux": "xdg-open ~/Pictures",
+    "mac": "open ~/Pictures"
+  }
+  },
+  {
+  "input": [
+    "Open videos folder",
+    "Show me my video files",
+    "Open movies directory",
+    "Launch videos folder",
+    "Take me to videos"
+  ],
+  "output": {
+    "windows": "explorer shell:My Video",
+    "linux": "xdg-open ~/Videos",
+    "mac": "open ~/Videos"
+  }
+  },
+  {
+  "input": [
+    "Save clipboard content",
+    "Store copied text",
+    "Write clipboard to file",
+    "Backup clipboard",
+    "Export clipboard"
+  ],
+  "output": {
+    "windows": "powershell Get-Clipboard > clipboard.txt",
+    "linux": "xclip -o > clipboard.txt",
+    "mac": "pbpaste > clipboard.txt"
+  }
+  }
+]
