@@ -1,0 +1,47 @@
+[
+  {
+    "input": [
+      "search for <query>",
+      "look up <query>",
+      "google <query>",
+      "find <query> on google"
+    ],
+    "output": "search"
+  },
+  {
+    "input": [
+      "what is <query>",
+      "tell me about <query>",
+      "who is <query>",
+      "define <query>",
+      "give info about <query>"
+    ],
+    "output": "wiki"
+  },
+  {
+    "input": [
+      "set a timer for <duration>",
+      "start a timer of <duration>",
+      "countdown <duration>",
+      "remind me after <duration>"
+    ],
+    "output": "timer"
+  },
+  {
+    "input": [
+      "open <app>",
+      "launch <app>",
+      "start <app>"
+    ],
+    "output": "app"
+  },
+  {
+    "input": [
+      "what time is it",
+      "tell me the time",
+      "current time",
+      "say the time"
+    ],
+    "output": "time"
+  }
+]
