@@ -10,7 +10,7 @@ startBtn.addEventListener("click", async () => {
   recognition.onresult = function (event) {
     const transcript = event.results[0][0].transcript
     userText.innerText = transcript
-    exec(`python ../../backend/model/inference.py "${transcript}"`, (err, stdout, stderr) => {
+    exec(`python ../../backend/model/main.py "${transcript}"`, (err, stdout, stderr) => {
       if (err) {
         botReply.innerText = "Error occurred"
         console.log(err)
