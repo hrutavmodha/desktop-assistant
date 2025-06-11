@@ -5,7 +5,7 @@ model = load("model.pkl")
 while True:
     user_input = sys.argv[1]
     browse = re.search(r"(?:search|look\s*up|google)\s+(.*)", user_input, flags = re.I)
-    wiki = re.search(r"(?:what is|who is|define|tell me about|give info about)\s+(.*)", cmd, re.IGNORECASE)
+    wiki = re.search(r"(?:what is|who is|define|tell me about|give info about)\s+(.*)", cmd, re.I)
     if user_input.lower() in ["exit", "quit", "bye", "go off", "goodbye"]:
         print("Bye")
         break
