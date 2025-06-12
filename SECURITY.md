@@ -4,17 +4,17 @@ Thank you for helping keep **Voice-Assistant** safe and secure.
 
 ---
 
-## 📅 Supported Versions
+# 📅 Supported Versions
 
 I currently support only the latest `main` branch.
 
 ---
 
-## 🚨 Reporting a Vulnerability
+# 🚨 Reporting a Vulnerability
 
 If you discover a security vulnerability within this project, **please do not create a public GitHub issue.**
 
-### 🔒 Instead, follow these steps:
+# 🔒 Follow these steps
 
 1. Email the project maintainer **privately**:
    - 📧 **modhahrutav@gmail.com**
@@ -28,7 +28,7 @@ If you discover a security vulnerability within this project, **please do not cr
 
 ---
 
-## ✅ Responsible Disclosure Expectations
+# ✅ Responsible Disclosure Expectations
 
 - I appreciate responsible disclosure.
   
@@ -38,19 +38,17 @@ If you discover a security vulnerability within this project, **please do not cr
 
 ---
 
-## 🛠️ Tips for Secure Contribution
+# 🛠️ Tips for Secure Contribution
 
 - Sanitize user inputs always
   
 - Avoid hardcoded paths or credentials
   
-- Never use `eval()` or `exec()` functions without sanitization
-  
 - Limit file-system access from UI-side
 
 ---
 
-## 🙏 Thank You
+# 🙏 Thank You
 
 Your help in making **Voice-Assistant** more secure is highly appreciated!
 
