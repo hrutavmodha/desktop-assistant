@@ -8,7 +8,6 @@ def main():
         return
     cmd = sys.argv[1].lower()
     model = getModel(cmd)
-    print(f"Predicted model: {model}")
     if model == "model1":
         execShellCMD(cmd)
     elif model == "model2":
