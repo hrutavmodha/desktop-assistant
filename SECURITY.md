@@ -1,6 +1,6 @@
 # 🔐 Security Policy
 
-Thank you for helping keep **VoiceGPT**, Offline Voice Assistant safe and secure.
+Thank you for helping keep **Voice-Assistant** safe and secure.
 
 ---
 
@@ -44,7 +44,7 @@ If you discover a security vulnerability within this project, **please do not cr
   
 - Avoid hardcoded paths or credentials
   
-- Never use `eval()` or `exec()` without sanitization
+- Never use `eval()` or `exec()` functions without sanitization
   
 - Limit file-system access from UI-side
 
@@ -52,6 +52,6 @@ If you discover a security vulnerability within this project, **please do not cr
 
 ## 🙏 Thank You
 
-Your help in making **VoiceGPT** more secure is highly appreciated!
+Your help in making **Voice-Assistant** more secure is highly appreciated!
 
 Let’s keep the AI helpful and safe for everyone at the same time 🔐
