@@ -28,7 +28,13 @@ jobs:
             --clean \
             --noconfirm \
             --hidden-import sklearn \
-            --hidden-import joblib
+            --hidden-import joblib \
+            --add-data "backend/model/model1" \
+            --add-data "backend/model/model1" \
+            --add-data "backend/model/model2" \
+            --add-data "backend/model/model2" \
+            --add-data "backend/model/model4" \
+            --add-data "backend/model/model4"
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
