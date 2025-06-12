@@ -1,4 +1,4 @@
-name: Model 1 Test
+name: Test Model 1
 on:
   workflow_dispatch:
 jobs:
