@@ -9,11 +9,11 @@ def main():
     cmd = sys.argv[1].lower()
     model = getModel(cmd)
     print(f"Predicted model: {model}")
-    if route == "model1":
+    if model == "model1":
         execShellCMD(cmd)
-    elif route == "model2":
+    elif model == "model2":
         execDynamicCMD(cmd)
-    elif route == "model3":
+    elif model == "model3":
         print("Model 3 not yet integrated.")
     else:
         print("Could not determine model.")
