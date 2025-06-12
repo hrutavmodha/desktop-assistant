@@ -37,6 +37,7 @@ jobs:
           echo "$PWD/upx/upx-4.2.1-${{ runner.os == 'Windows' && 'win64' || 'amd64_linux' }}"
           >> $GITHUB_PATH
       - name: Build Executable with PyInstaller
+        shell: bash
         run: |
           pyinstaller backend/model/main.py \
             --onefile \
