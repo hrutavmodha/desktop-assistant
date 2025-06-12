@@ -1,7 +1,7 @@
 
-# 🤝 Contributing to VoiceGPT
+# 🤝 Contributing to Voice-Assistant
 
-Hello! 👋 Thank you for your interest in contributing to VoiceGPT - an open-source voice assistant powered by Transformers, Node.js and Electron.js.
+Hello! 👋 Thank you for your interest in contributing to Voice-Assistant - an open-source voice assistant powered by light-weight ML models, Node.js and Electron.js.
 
 ---
 
@@ -46,7 +46,7 @@ Hello! 👋 Thank you for your interest in contributing to VoiceGPT - an open-so
 **2. Clone it locally**
 
    ```bash
-   git clone "https://github.com/<your-username>/voice-assistant.git"
+   git clone "https://github.com/hrutavmodha/voice-assistant.git"
    ```
 
 **3. Install dependencies**
@@ -69,7 +69,7 @@ npm install
 
 ```Bash
 cd backend/model
-pip install transformers pytorch sys
+pip install scikit-learn
 python train.py
 ```
 
