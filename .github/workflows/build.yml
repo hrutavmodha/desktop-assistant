@@ -29,10 +29,6 @@ jobs:
             --noconfirm \
             --hidden-import sklearn \
             --hidden-import joblib
-      - name: Compress with UPX (non-macOS)
-        if: runner.os != 'macOS'
-        run: |
-          upx dist/voice_assistant${{ runner.os == 'Windows' && '.exe' || '' }}
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
