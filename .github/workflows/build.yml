@@ -18,15 +18,22 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pyinstaller scikit-learn joblib
-      - name: Download and Set Up UPX
-        if: runner.os != 'macOS'
+      - name: Set Up UPX for Windows
+        if: runner.os == 'Windows'
         shell: bash
+        run: |
+          curl -L -o upx.zip https://github.com/upx/upx/releases/download/v4.2.1/upx-4.2.1-${{ runner.os == 'Windows' && 'win64' || 'amd64_linux' }}.zip
+          mkdir upx
+           -xf upx.zip -C upx
+          echo "$PWD/upx/upx-4.2.1-${{ runner.os == 'Windows' && 'win64' || 'amd64_linux' }}"
+          >> $GITHUB_PATH
+      - name: Set up UPX for Linux and MacOS
         run: |
           curl -L -o upx.zip https://github.com/upx/upx/releases/download/v4.2.1/upx-4.2.1-${{ runner.os == 'Windows' && 'win64' || 'amd64_linux' }}.tar.xz
           mkdir upx
           tar -xf upx.zip -C upx
           echo "$PWD/upx/upx-4.2.1-${{ runner.os == 'Windows' && 'win64' || 'amd64_linux' }}"
-          >> $GITHUB_PATH      
+          >> $GITHUB_PATH
       - name: Build Executable with PyInstaller
         run: |
           pyinstaller backend/model/main.py \
