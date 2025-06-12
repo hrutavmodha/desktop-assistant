@@ -1,0 +1,46 @@
+name: Build Executables (Windows, Linux, macOS)
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ windows-latest, ubuntu-latest, macos-latest ]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyinstaller scikit-learn joblib
+      - name: Download and Set Up UPX
+        if: runner.os != 'macOS'
+        run: |
+          curl -L -o upx.zip https://github.com/upx/upx/releases/download/v4.2.1/upx-4.2.1-${{ runner.os == 'Windows' && 'win64' || 'amd64_linux' }}.zip
+          unzip upx.zip -d upx
+          echo "$PWD/upx/upx-4.2.1-${{ runner.os == 'Windows' && 'win64' || 'amd64_linux' }}" >> $GITHUB_PATH
+      - name: Build Executable with PyInstaller
+        run: |
+          pyinstaller backend/model/main.py \
+            --onefile \
+            --name voice_assistant \
+            --distpath dist \
+            --clean \
+            --noconfirm \
+            --hidden-import sklearn \
+            --hidden-import joblib
+      - name: Compress with UPX (non-macOS)
+        if: runner.os != 'macOS'
+        run: |
+          upx dist/voice_assistant${{ runner.os == 'Windows' && '.exe' || '' }}
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: voice-assistant-${{ runner.os }}
+          path: dist/voice_assistant${{ runner.os == 'Windows' && '.exe' || '' }}
