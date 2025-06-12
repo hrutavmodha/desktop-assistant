@@ -2,7 +2,7 @@ from json import load
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
 from joblib import dump as save
-with open("data.json") as file:
+with open("backend/model/model2/data.json") as file:
     data = load(file)
 pssample = {
     "<query>": ["dogs", "AI", "news", "time machine", "game"],
