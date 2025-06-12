@@ -15,11 +15,11 @@ jobs:
       run: |
         pip install scikit-learn joblib
     - name: Train Model 1
-      run: python model1/train_model1.py
+      run: python backend/model/model1/train.py
     - name: Upload model artifacts
       uses: actions/upload-artifact@v4
       with:
         name: model1-artifacts
         path: |
-          model1/model.pkl
-          model1/vectorizer.pkl
+          backend/model1/model.pkl
+          backend/model1/vectorizer.pkl
