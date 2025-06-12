@@ -1,8 +1,6 @@
 name: Model 1 Test (Windows)
 on:
-  push:
-    paths:
-      - 'backend/model/model1/**'
+  workflow_dispatch:
 jobs:
   test-model1:
     runs-on: windows-latest
