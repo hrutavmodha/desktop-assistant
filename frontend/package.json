@@ -21,7 +21,7 @@
     "electron-builder": "^24.13.0"
   }
   "build": {
-    "appId": "com.va.desktop",
+    "appId": "com.hrutavmodha.voiceassistant",
     "productName": "VoiceAssistant",
     "extraResources": [{ 
       "from": "../backend/model/main.py", 
