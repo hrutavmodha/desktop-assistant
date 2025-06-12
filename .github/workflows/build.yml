@@ -29,6 +29,7 @@ jobs:
           Expand-Archive -Force "upx.zip" -DestinationPath "upx"
           Add-Content -Path $env:GITHUB_PATH -Value "$pwd\upx\upx-4.2.1-win64"
       - name: Set up UPX for Linux and MacOS
+        if: runner.os != 'Windows'
         run: |
           curl -L -o upx.zip https://github.com/upx/upx/releases/download/v4.2.1/upx-4.2.1-${{ runner.os == 'Windows' && 'win64' || 'amd64_linux' }}.tar.xz
           mkdir upx
