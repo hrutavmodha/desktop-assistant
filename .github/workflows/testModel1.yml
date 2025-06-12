@@ -1,4 +1,4 @@
-name: Model 1 Test (Windows)
+name: Model 1 Test
 on:
   workflow_dispatch:
 jobs:
