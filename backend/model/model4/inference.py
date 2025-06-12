@@ -1,5 +1,6 @@
 #def getModel(query):
 from joblib import load
+import sys
 clf = load("backend/model/model4/model4.pkl")
 vectorizer = load("backend/model/model4/vectorizer4.pkl")
 query = sys.argv[1]
