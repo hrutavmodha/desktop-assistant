@@ -1,0 +1,25 @@
+name: Train Model 2
+on:
+  workflow_dispatch:
+jobs:
+  train:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11
+    - name: Install dependencies
+      run: |
+        pip install scikit-learn joblib
+    - name: Train Model 2
+      run: python backend/model/model2/train.py
+    - name: Upload model artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: model2-artifacts
+        path: |
+          model2.pkl
+          vectorizer2.pkl
