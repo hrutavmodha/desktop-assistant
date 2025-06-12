@@ -14,7 +14,7 @@ elif sys.platform == "darwin":
     OS = "mac"
 else:
     print("The Operating System of your device is currently not supported. I am sorry")
-with open("data.json", "r") as file:
+with open("backend/model/model1/data.json", "r") as file:
     data = json.load(file)
     for entry in data:
         output_command = entry["output"][OS]
