@@ -20,6 +20,7 @@ jobs:
           pip install pyinstaller scikit-learn joblib
       - name: Download UPX (Windows)
         if: runner.os == 'Windows'
+        shell: bash
         run: |
          curl -L -o upx.zip https://github.com/upx/upx/releases/download/v4.2.1/upx-4.2.1-win64.zip
          powershell -Command "Expand-Archive -Force upx.zip ."
