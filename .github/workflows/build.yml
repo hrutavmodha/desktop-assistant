@@ -24,7 +24,8 @@ jobs:
         run: |
          curl -L -o upx.zip https://github.com/upx/upx/releases/download/v4.2.1/upx-4.2.1-win64.zip
          powershell -Command "Expand-Archive -Force upx.zip ."
-         echo "${{ github.workspace }}\\upx-4.2.1-win64" >> $env:GITHUB_PATH
+         echo "${{ github.workspace }}\\upx-4.2.1-win64" 
+         >> $env:GITHUB_PATH
       - name: Set up UPX for Linux and MacOS
         run: |
           curl -L -o upx.zip https://github.com/upx/upx/releases/download/v4.2.1/upx-4.2.1-${{ runner.os == 'Windows' && 'win64' || 'amd64_linux' }}.tar.xz
