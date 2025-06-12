@@ -1,0 +1,52 @@
+{
+  "name": "va-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "main": "public/electron.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "app": "electron .",
+    "package": "electron-builder"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.23.0",
+    "react-router-dom": "^6.23.0",
+    "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.0"
+  }
+  "build": {
+    "appId": "com.va.desktop",
+    "productName": "VoiceAssistant",
+    "extraResources": [{ 
+      "from": "../backend/model/main.py", 
+      "to": "main.py" 
+    },{ 
+      "from": "../backend/model/model4/model4.pkl", 
+      "to": "model4.pkl" 
+    },{
+      "from": "../backend/model/model4/vectorizer4.pkl",
+      "to": "vectorizer4.pkl" 
+    }],
+  "files": [ "**/*" ],
+  "directories": {
+    "buildResources": "assets"
+  },
+  "win": {
+    "target": "nsis"
+  },
+  "linux": {
+    "target": "AppImage",
+    "category": "Utility"
+  },
+  "mac": {
+    "target": "dmg",
+    "category": "public.app-category.utilities"
+  }
+  }
+}
