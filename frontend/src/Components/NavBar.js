@@ -12,6 +12,12 @@ export default function NavBar() {
                     <Link to="/about" className="text-white hover:text-yellow-400 transition-colors duration-200">
                         About
                     </Link>
+                    <Link to="/contact" className="text-white hover:text-yellow-400 transition-colors duration-200">
+                        Contact
+                    </Link>
+                    <Link to="/documentation" className="text-white hover:text-yellow-400 transition-colors duration-200">
+                        Documentation
+                    </Link>
                 </div>
             </div>
         </nav>
