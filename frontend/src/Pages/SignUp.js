@@ -19,6 +19,12 @@ export default function SignUp() {
   }
   const handleSubmit = (e) => {
     e.preventDefault()
+    if (!form.name.trim() || 
+        !form.email.trim() || 
+        !form.phone.trim() || 
+        !form.password.trim()) {
+  setStatus("Please fill all fields.")
+    } else {
     fetch(`${process.env.REACT_APP_BACKEND_URL}/signup`, {
       method: "POST",
       headers: { 
@@ -34,6 +40,7 @@ export default function SignUp() {
       setStatus("Server error. Try again.")
       console.log(err)
     })
+  }
   }
   return (
     <div className="max-w-md mx-auto mt-10 p-4 border rounded-xl shadow-lg">
