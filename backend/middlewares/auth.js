@@ -1,7 +1,7 @@
 const bcrypt = require("bcryptjs")
 const { signToken } = require("./jwts")
 const User = require("../schemas/user")
-async function handleSignup(req, res) {
+module.exports = handleSignup = async (req, res) => {
   const { name, email, phone, password } = req.body
   if (!name || !email || !phone || !password) {
     return res.status(400).json({ message: "All fields are required" })
@@ -22,4 +22,3 @@ async function handleSignup(req, res) {
   })
   res.status(200).json({ message: "You have signed up successfully" })
 }
-module.exports = handleSignup
