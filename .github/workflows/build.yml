@@ -1,6 +1,8 @@
 name: Build and Release Executable
 on:
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   build:
     strategy:
