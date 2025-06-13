@@ -29,12 +29,12 @@ jobs:
             --noconfirm \
             --hidden-import sklearn \
             --hidden-import joblib \
-            --add-data "backend/model/model1" \
-            --add-data "backend/model/model1" \
-            --add-data "backend/model/model2" \
-            --add-data "backend/model/model2" \
-            --add-data "backend/model/model4" \
-            --add-data "backend/model/model4"
+            --add-data "backend/model/model1/model1.pkl:backend/model/model1" \
+            --add-data "backend/model/model1/vectorizer1.pkl:backend/model/model1" \
+            --add-data "backend/model/model2/model2.pkl:backend/model/model2" \
+            --add-data "backend/model/model2/vectorizer2.pkl:backend/model/model2" \
+            --add-data "backend/model/model4/model4.pkl:backend/model/model4" \
+            --add-data "backend/model/model4/vectorizer4.pkl:backend/model/model4"
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
