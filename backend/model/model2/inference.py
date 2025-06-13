@@ -3,7 +3,7 @@ def execDynamicCMD(cmd):
   from nltk import word_tokenize, pos_tag
   from joblib import load
   import sys
-  from handlers.googleSearch import googleSearch
+  from handlers import googleSearch, wikiSearch
   nltk.download("punkt")
   nltk.download("averaged_perceptron_tagger")
   clf = load("backend/model/model2/model2.pkl")
