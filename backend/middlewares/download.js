@@ -1,4 +1,4 @@
-module.exports = handleDownload(req, res) => {
+module.exports.handleDownload = (req, res) => {
     const file = path.join(__dirname, "dist")
     res.download(file, "VoiceAssistant.exe", (error) => {
         if (error) {
