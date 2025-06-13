@@ -3,7 +3,7 @@ def execDynamicCMD(cmd):
   from nltk import word_tokenize, pos_tag
   from joblib import load
   import sys
-  from handlers import googleSearch, wikiSearch
+  from handlers import googleSearch, wikiSearch, setTimer
   nltk.download("punkt")
   nltk.download("averaged_perceptron_tagger")
   clf = load("backend/model/model2/model2.pkl")
@@ -20,5 +20,7 @@ def execDynamicCMD(cmd):
       googleSearch(term)
   elif intent == "wiki":
       wikiSearch(term)
+  elif intent == "timer":
+      setTimer(cmd)
   else:
-      print("Sorry, I can't find any relevant information")
+      print("Sorry, I can't find any relevant information or perform any action on your given command. Try be more specific")
