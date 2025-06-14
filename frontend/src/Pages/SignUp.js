@@ -35,7 +35,7 @@ export default function SignUp() {
     }).then((res) => {
       return res.json()
     }).then((data) => {
-      setStatus("You have signed up successfully")
+      setStatus(data.message)
     }).catch(err => {
       setStatus("Server error. Try again.")
       console.log(err)
