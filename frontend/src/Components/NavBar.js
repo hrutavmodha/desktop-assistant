@@ -18,6 +18,9 @@ export default function NavBar() {
                     <Link to="/documentation" className="text-white hover:text-yellow-400 transition-colors duration-200">
                         Documentation
                     </Link>
+                    <Link to="/signup" className="text-white hover:text-yellow-400 transition-colors duration-200">
+                        Sign Up
+                    </Link>
                 </div>
             </div>
         </nav>
