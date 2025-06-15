@@ -1,13 +1,20 @@
 {
-  "name": "voice-assistant",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "concurrently \"npm run frontend\" \"npm run backend\""
-    "frontend": "cd frontend && npm run start",
-    "backend": "cd ../backend && npm run start"
-  },
-  "devDependencies": {
-    "concurrently": "^8.2.0"
-  }
+    "name": "voice-assistant",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+        "frontend": "cd frontend && npm run start",
+        "backend": "cd backend && npm run start"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.0"
+    },
+    "build": {
+        "extraResources": [{
+            "from": "frontend/executables",
+            "to": "executables",
+            "filter": ["**/*"]
+        }]
+    }
 }

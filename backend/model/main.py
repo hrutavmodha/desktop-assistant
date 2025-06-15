@@ -13,7 +13,7 @@ def main():
     elif model == "model2":
         execDynamicCMD(cmd)
     elif model == "model3":
-        print("Model 3 not yet integrated.")
+        print("Model 3 is not yet integrated.")
     else:
         print("Could not determine model.")
 if __name__ == "__main__":

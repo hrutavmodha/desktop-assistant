@@ -1,4 +1,4 @@
-import { H1 } from "../Components/Headings"
+import { H1 } from "../Components/Heading"
 import P from "../Components/Paragraph"
 export default function Contact() {
   return (
