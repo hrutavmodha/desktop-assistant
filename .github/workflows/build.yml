@@ -32,6 +32,13 @@ jobs:
             --hidden-import sklearn \
             --hidden-import joblib \
             --hidden-import importlib.resources \
+            --hidden-import sklearn.utils._array_api \
+            --hidden-import sklearn.utils.validation \
+            --hidden-import sklearn.feature_extraction \
+            --hidden-import sklearn.feature_extraction.text \
+            --hidden-import scipy.stats \
+            --hidden-import scipy.stats._sobol \
+            --hidden-import numpy \
             --add-data "backend/model/model1/model.pkl:backend/model/model1" \
             --add-data "backend/model/model1/vectorizer.pkl:backend/model/model1" \
             --add-data "backend/model/model2/model2.pkl:backend/model/model2" \
