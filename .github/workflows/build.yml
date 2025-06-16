@@ -36,6 +36,7 @@ jobs:
             --hidden-import sklearn.utils.validation \
             --hidden-import sklearn.feature_extraction \
             --hidden-import sklearn.feature_extraction.text \
+            --hidden-import sklearn.naive_bayes \
             --hidden-import scipy.stats \
             --hidden-import scipy.stats._sobol \
             --hidden-import numpy \

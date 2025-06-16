@@ -33,7 +33,7 @@ app.whenReady()
         default:
             console.log("Unsupported platform");
     }
-    const url = `https://github.com/hrutavmodha/voice-assistant/releases/download/build-34/${filename}`;
+    const url = `https://github.com/hrutavmodha/voice-assistant/releases/download/build-35/${filename}`;
     const savePath = path.join(os.homedir(), filename);
     new Notification({
         title: "Installing!",
