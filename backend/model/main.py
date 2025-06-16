@@ -12,14 +12,14 @@ def main():
     model = getModel(cmd)
     log("Command sent to model 4 for classification of your command")
     if model == "model1":
-        execShellCMD(cmd)
         log("Condition 1 matched")
+        execShellCMD(cmd)
     elif model == "model2":
-        execDynamicCMD(cmd)
         log("Condition 2 matched")
+        execDynamicCMD(cmd)
     elif model == "model3":
-        print("Model 3 is not yet integrated.")
         log("Condition 3 matched")
+        print("Model 3 is not yet integrated.")
     else:
         print("Could not determine model.")
         log("No condition matched")

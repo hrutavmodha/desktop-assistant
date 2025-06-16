@@ -34,7 +34,7 @@ app.whenReady()
         default:
             console.log("Unsupported platform");
     }
-    url = `https://github.com/hrutavmodha/voice-assistant/releases/download/build-24/${filename}`;
+    url = `https://github.com/hrutavmodha/voice-assistant/releases/download/build-30/${filename}`;
     const savePath = path.join(os.homedir(), filename);
     console.log(`Attempting to fetch at url ${url}`)
     fetch(url, {

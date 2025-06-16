@@ -3,8 +3,8 @@ def execShellCMD(cmd):
   import os, sys
   basePath = getattr(sys, "_MEIPASS", os.path.dirname(__file__))
   modelFolder = os.path.join(basePath, "backend", "model", "model4")
-  modelPath = os.path.join(modelFolder, "model4.pkl") 
-  vectorizerPath = os.path.join(modelFolder, "vectorizer4.pkl")
+  modelPath = os.path.join(modelFolder, "model1.pkl") 
+  vectorizerPath = os.path.join(modelFolder, "vectorizer1.pkl")
   model = load(modelPath)
   vectorizer = load(vectorizerPath)
   user_vec = vectorizer.transform([cmd])
