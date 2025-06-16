@@ -7,7 +7,7 @@ def execDynamicCMD(cmd):
   nltk.download("punkt")
   nltk.download("averaged_perceptron_tagger")
   basePath = getattr(sys, "_MEIPASS", os.path.dirname(__file__))
-  modelFolder = os.path.join(basePath, "backend", "model", "model4")    
+  modelFolder = os.path.join(basePath, "backend", "model", "model2")    
   modelPath = os.path.join(modelFolder, "model2.pkl")
   vectorizerPath = os.path.join(modelFolder, "vectorizer2.pkl")
   model = load(modelPath)

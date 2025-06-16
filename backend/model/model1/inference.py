@@ -2,7 +2,7 @@ def execShellCMD(cmd):
   from joblib import load
   import os, sys
   basePath = getattr(sys, "_MEIPASS", os.path.dirname(__file__))
-  modelFolder = os.path.join(basePath, "backend", "model", "model4")
+  modelFolder = os.path.join(basePath, "backend", "model", "model1")
   modelPath = os.path.join(modelFolder, "model1.pkl") 
   vectorizerPath = os.path.join(modelFolder, "vectorizer1.pkl")
   model = load(modelPath)
