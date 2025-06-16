@@ -3,12 +3,17 @@ def execDynamicCMD(cmd):
   from nltk import word_tokenize, pos_tag
   from joblib import load
   from handlers import googleSearch, wikiSearch, setTimer
+  import os, sys
   nltk.download("punkt")
   nltk.download("averaged_perceptron_tagger")
-  clf = load("model2/model2.pkl")
-  vectorizer = load("model2/vectorizer2.pkl")
+  basePath = getattr(sys, "_MEIPASS", os.path.dirname(__file__))
+  modelFolder = os.path.join(basePath, "backend", "model", "model4")    
+  modelPath = os.path.join(modelFolder, "model4.pkl")
+  vectorizerPath = os.path.join(modelFolder, "vectorizer4.pkl")
+  model = load(modelPath)
+  vectorizer = load(vectorizerPath)
   cmd_vec = vectorizer.transform([cmd])
-  intent = clf.predict(cmd_vec)[0]
+  intent = model.predict(cmd_vec)[0]
   term = ""
   tokens = word_tokenize(cmd)
   tagged = pos_tag(tokens) 
