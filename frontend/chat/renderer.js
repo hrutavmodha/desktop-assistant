@@ -9,15 +9,16 @@ startBtn.addEventListener("click", () => {
         const transcript = event.results[0][0].transcript;
         appendToConvo("You", transcript);
         window.python.run(transcript)
-        const response = stdout.trim();
-        appendToConvo("Bot", response);
-        const synth = window.speechSynthesis;
-        const utter = new SpeechSynthesisUtterance(response);
-        synth.speak(utter)
     }
     recognition.onerror = (e) => {
         appendToConvo("Error", e.error);
     }
+    window.python.output((data) => {
+        const synth = window.speechSynthesis;
+        const utter = new SpeechSynthesisUtterance(data);
+        synth.speak(utter)
+        appendToConvo("Bot", data)
+    })
 })
 function appendToConvo(sender, message) {
     const para = document.createElement("div");

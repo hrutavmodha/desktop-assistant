@@ -1,8 +1,8 @@
 const { contextBridge, ipcRenderer } = require("electron")
 contextBridge.exposeInMainWorld("python", {
-    run: (scriptPath) => {
+    run: (cmd) => {
         ipcRenderer.send("run", {
-            scriptPath
+            cmd
         })
     },
     output: (cb) => {

@@ -39,6 +39,7 @@ jobs:
             --hidden-import scipy.stats \
             --hidden-import scipy.stats._sobol \
             --hidden-import numpy \
+            --hidden-import nltk \
             --add-data "backend/model/model1/model.pkl:backend/model/model1" \
             --add-data "backend/model/model1/vectorizer.pkl:backend/model/model1" \
             --add-data "backend/model/model2/model2.pkl:backend/model/model2" \

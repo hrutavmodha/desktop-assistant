@@ -1,11 +1,12 @@
 const os = require("os");
 const fs = require("fs");
 const path = require("path");
-const { app, BrowserWindow, ipcMain } = require("electron")
-const { execFile } = require("child_process")
+const { app, BrowserWindow, ipcMain, Notification } = require("electron")
+const { spawn } = require("child_process");
+let filename;
 function createWindow() {
     const win = new BrowserWindow({
-        width: 600,
+        width: 800,
         height: 600,
         webPreferences: {
             nodeIntegration: false,
@@ -15,12 +16,10 @@ function createWindow() {
     })
     win.loadFile("chat/index.html")
 }
-console.log("Window is created successfully")
 app.whenReady()
 .then(() => {
     createWindow()
     const platform = os.platform();
-    let url, filename;
     switch (platform) {
         case "win32":
             filename = "voice_assistant_windows-latest.exe";
@@ -34,26 +33,55 @@ app.whenReady()
         default:
             console.log("Unsupported platform");
     }
-    url = `https://github.com/hrutavmodha/voice-assistant/releases/download/build-33/${filename}`;
+    const url = `https://github.com/hrutavmodha/voice-assistant/releases/download/build-34/${filename}`;
     const savePath = path.join(os.homedir(), filename);
-    console.log(`Attempting to fetch at url ${url}`)
+    new Notification({
+        title: "Installing!",
+        body: "Installing executable file for your OS. Please wait a while..."
+    }).show()
     fetch(url, {
         method: "GET"
     }).then(res => {
         if (!res.ok)
-        console.log(`Failed to download: ${res.statusText}`);
+        new Notification({
+            title: "Error!",
+            body: "There is some network issue. Please try again later"
+        }).show()
         return res.arrayBuffer();
     }).then(data => {
         fs.writeFileSync(savePath, Buffer.from(data));
         if (platform !== "win32")
         fs.chmodSync(savePath, 0o755);
-        console.log("Downloaded and saved to path:", savePath)
+        new Notification({
+            title: "Success!",
+            body: "The exeutable file of voice-assistant has been installed on your system successfully."
+        }).show()
     }).catch(err =>
-        console.error("Download failed:", err)
+        new Notification({
+            title: "Error!",
+            body: "An error occured while installing the executable file for your OS. Please try again later"
+        }).show()
     )
 }).catch(error =>
-    console.log(error)
+    new Notification({
+        title: "Error!",
+        body: "An error occured while launching the application. Please try again later."
+    }).show()
 )
+ipcMain.on("run", (e, args) => {
+    const { cmd } = args
+    const exeProcess = spawn(filename, [cmd])
+    output = ""
+    exeProcess.stdout.on("data", (data) => {
+        output = output + data.toString()
+    })
+    exeProcess.stderr.on("data", (error) => {
+        output = output + error.toString()
+    })
+    exeProcess.on("close", (event) => {
+        event.sender.on("output", output)
+    })
+})
 app.on("window-all-closed", () => {
     if (process.platform !== "darwin")
     app.quit()
