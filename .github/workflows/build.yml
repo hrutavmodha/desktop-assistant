@@ -1,14 +1,14 @@
 name: Build and Release Executable
 on:
-  workflow_dispatch:
+    workflow_dispatch:
 permissions:
-  contents: write
+    contents: write
 jobs:
-  build:
-    strategy:
-      matrix:
-        os: [windows-latest, ubuntu-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
+    build:
+        strategy:
+        matrix:
+            os: [windows-latest, ubuntu-latest, macos-latest]
+        runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -23,7 +23,7 @@ jobs:
       - name: Build executable
         shell: bash
         run: |
-          pyinstaller backend/model/main.py \
+            pyinstaller backend/model/main.py \
             --onefile \
             --name voice_assistant_${{ matrix.os }} \
             --distpath dist \
@@ -53,12 +53,12 @@ jobs:
             --add-data "backend/model/model4/vectorizer4.pkl:backend/model/model4"
       - name: Rename output binary
         run: |
-          mkdir uploads
-          mv dist/* uploads/voice_assistant_${{ matrix.os }}${{ matrix.os == 'windows-latest' && '.exe' || '' }}
+            mkdir uploads
+            mv dist/* uploads/voice_assistant_${{ matrix.os }}${{ matrix.os == 'windows-latest' && '.exe' || '' }}
       - name: Upload release asset
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: build-${{ github.run_number }}
-          files: uploads/*
+            tag_name: build-${{ github.run_number }}
+            files: uploads/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
