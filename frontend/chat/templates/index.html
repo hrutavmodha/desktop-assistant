@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Smart Voice Assistant</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
 </head>
 <body>
   <div class="container">
@@ -12,6 +12,6 @@
     <button id="startBtn">Speak</button>
     <div id="convoBox" class="log-window"></div>
   </div>
-  <script type="module" src="renderer.js"></script>
+  <script type="module" src="{{ url_for('static', filename='renderer.js') }}"></script>
 </body>
 </html>
