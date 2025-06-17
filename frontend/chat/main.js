@@ -1,6 +1,6 @@
-const os = require("os");
-const fs = require("fs");
-const path = require("path");
+const os = require("os")
+const fs = require("fs")
+const path = require("path")
 const { app, BrowserWindow, ipcMain, Notification } = require("electron")
 const { spawn } = require("child_process");
 let filename;
@@ -9,17 +9,19 @@ function createWindow() {
         width: 800,
         height: 600,
         webPreferences: {
-            nodeIntegration: false,
+            webSecurity: false,
+            sandbox: false,
             contextIsolation: true,
+            nodeIntegration: false,
             preload: path.join(__dirname, "preload.js")
         },
     })
-    win.loadFile("chat/index.html")
+    win.loadFile(path.join(__dirname, "index.html"))
 }
 app.whenReady()
 .then(() => {
     createWindow()
-    const platform = os.platform();
+    const platform = os.platform()
     switch (platform) {
         case "win32":
             filename = "voice_assistant_windows-latest.exe";
