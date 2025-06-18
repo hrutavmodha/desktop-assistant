@@ -4,6 +4,7 @@ body {
   color: #333;
   margin: 0;
   padding: 20px;
+  overflow: hidden;
 }
 
 .container {
@@ -17,9 +18,14 @@ body {
 }
 
 button {
-  padding: 10px 20px;
+  width: 150px;
+  padding: 10px; 
   font-size: 16px;
-  margin-top: 20px;
+  margin-top: 10px;
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -29,6 +35,9 @@ button {
   padding: 10px;
   border-top: 1px solid #ccc;
   font-size: 14px;
+  height: 265px;
+  background: #f9f9f9;
+  overflow-y: scroll;
 }
 
 footer {

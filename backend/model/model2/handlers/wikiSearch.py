@@ -2,10 +2,10 @@ def wikiSearch(query):
     import wikipedia as wiki
     try:
         summary = wiki.summary(query, sentences = 2)
-        print(summary)
+        return summary
     except wiki.exceptions.DisambiguationError as e:
-        print(f"I am confused. It has several meanings like {e[:5]}. Please specify")
+        return  f"I am confused. It has several meanings like {e.options[:5]}. Please specify"
     except wiki.exceptions.PageError:
-        print("Can't find any information related to your query. Did you meant something else")
+        return "Can't find any information related to your query. Did you meant something else?"
     except Exception as e:
-        print("An error occured\n{e}")
+        return f"An error occured\n{e}"

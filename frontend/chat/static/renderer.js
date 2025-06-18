@@ -15,21 +15,25 @@ startBtn.addEventListener("click", () => {
     recognition.onresult = (event) => {
         transcript = event.results[0][0].transcript;
         appendToConvo("You", transcript);
+        fetch("/process", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                command: transcript
+            })
+        }).then((res) => {
+            return res.json()
+        }).then((data) => {
+            const utter = new SpeechSynthesisUtterance(data.message);
+            utter.lang = "en-US";
+            speechSynthesis.speak(utter);   
+            appendToConvo("Bot", data.message);
+        })
     }
     recognition.onerror = (e) => {
         appendToConvo("Error", e.error);
     }
-    fetch("/process", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ 
-            command: transcript 
-        })
-    }).then((res) => {
-        return res.json()
-    }).then((data) => {
-        appendToConvo("Bot", data.message);
-    })
+
 })

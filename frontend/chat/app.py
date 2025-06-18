@@ -9,13 +9,13 @@ def index():
 def process():
     data = request.json
     cmd = data["command"]
-    main(cmd)
+    res = main(cmd)
     return jsonify({
         "status": "success", 
-        "message": "Command executed."
+        "message": "Command executed." if res is None else res
     })
 if __name__ == "__main__":
-    print("Opening browser...")
+    print(" * Opening browser...")
     web.open("http://localhost:3000")
-    print("Initializing server")
+    print(" * Initializing server")
     app.run(debug = True, host = "localhost", port = 3000)
