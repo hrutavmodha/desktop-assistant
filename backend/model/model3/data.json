@@ -1,0 +1,72 @@
+[
+    {
+        "input": [
+            "create a new file called <file>",
+            "make an empty file named <file>",
+            "generate a file with the name <file>",
+            "add a new file <file>",
+            "make <file> file now"
+        ],
+        "output": {
+            "windows": "type nul > <file>",
+            "linux": "touch <file>",
+            "mac": "touch <file>"
+        }
+    },
+    {
+        "input": [
+            "delete the file <file>",
+            "remove <file>",
+            "erase <file> from folder",
+            "delete <file> file",
+            "get rid of <file>"
+        ],
+        "output": {
+            "windows": "del <file>",
+            "linux": "rm <file>",
+            "mac": "rm <file>"
+        }
+    },
+    {
+        "input": [
+            "rename <source> to <destination>",
+            "change <source> to <destination>",
+            "rename file <source> as <destination>",
+            "rename the file <source>",
+            "convert <source> into <destination>"
+        ],
+        "output": {
+            "windows": "rename <source> <destination>",
+            "linux": "mv <source> <destination>",
+            "mac": "mv <source> <destination>"
+        }
+    },
+    {
+        "input": [
+            "copy <source> to <destination>",
+            "duplicate <source> as <destination>",
+            "make a copy of <source> called <destination>",
+            "copy file <source> to new file <destination>",
+            "save <source> as <destination>"
+        ],
+        "output": {
+            "windows": "copy <source> <destination>",
+            "linux": "cp <source> <destination>",
+            "mac": "cp <source> <destination>"
+        }
+    },
+    {
+        "input": [
+            "move <file> to <folder>",
+            "shift <file> into <folder> directory",
+            "relocate <file> to <folder>",
+            "put <file> in <folder> folder",
+            "move file <file> into <folder>"
+        ],
+        "output": {
+            "windows": "move <file> <folder>\\",
+            "linux": "mv <file> <folder>/",
+            "mac": "mv <file> <folder>/"
+        }
+    }
+]

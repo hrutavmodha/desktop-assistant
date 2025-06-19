@@ -10,9 +10,11 @@ def process():
     data = request.json
     cmd = data["command"]
     res = main(cmd)
+    if res == "":
+        res = "Command executed successfully. Please wait a while to see changes on your monitor."
     return jsonify({
         "status": "success", 
-        "message": "Command executed." if res is None else res
+        "message": res
     })
 if __name__ == "__main__":
     print(" * Opening browser...")

@@ -1,51 +1,49 @@
 [
-  {
-    "input": [
-      "Please open the calculator",
-      "Launch the command prompt",
-      "Run the notepad application",
-      "Start the terminal window",
-      "Fire up the control panel",
-      "Execute the file explorer",
-      "Initiate the media player",
-      "Trigger the settings window",
-      "Bring up the registry editor",
-      "Can you open my downloads folder?",
-      "Open the system information tool",
-      "Start paint application now",
-      "Launch the default music player",
-      "Boot up task manager",
-      "Kindly open run dialog",
-      "Open the disk cleanup utility",
-      "Start the bluetooth settings",
-      "Run the camera app for me",
-      "Open the calculator right away",
-      "Bring up the services menu"
-    ],
-    "output": "model1"
-},{
-  "input": [
-  "Search about black holes on Google",
-  "Can you look up the price of bitcoin?",
-  "Tell me who discovered gravity",
-  "Give me some information about machine learning",
-  "Start a countdown for 10 minutes",
-  "Remind me after 15 minutes",
-  "Look up the capital of Argentina",
-  "Define the term artificial intelligence",
-  "Set a timer of 3 minutes",
-  "What is the weather like in Tokyo?",
-  "Tell me about the history of the internet",
-  "Google the top universities in India",
-  "Who is Elon Musk?",
-  "Find some data on global warming",
-  "Look for best laptops under 50k",
-  "Give info about spaceX",
-  "Start a timer for one hour",
-  "Explain the concept of blockchain",
-  "Search who won the 2011 world cup",
-  "What is Newton’s third law?"
-  ],
-  "output": "model2"
-  }
+    {
+        "input": [
+            "Please open the calculator",
+            "Launch the command prompt",
+            "Run the notepad application",
+            "Start the terminal window",
+            "Fire up the control panel",
+            "Execute the file explorer",
+            "Initiate the media player",
+            "Trigger the settings window",
+            "Bring up the registry editor",
+            "Can you open my downloads folder?",
+            "Open the system information tool",
+            "Start paint application now",
+            "Launch the default music player",
+            "Boot up task manager",
+            "Kindly open run dialog",
+            "Open the disk cleanup utility",
+            "Start the bluetooth settings",
+            "Run the camera app for me",
+            "Open the calculator right away",
+            "Bring up the services menu"
+        ],
+        "output": "model1"
+    },
+    {
+        "input": [
+            "Search about black holes on Google",
+            "Can you look up the price of bitcoin?",
+            "Tell me who discovered gravity",
+            "Give me some information about machine learning",
+            "Look up the capital of Argentina",
+            "Define the term artificial intelligence",
+            "What is the weather like in Tokyo?",
+            "Tell me about the history of the internet",
+            "Google the top universities in India",
+            "Who is Elon Musk?",
+            "Find some data on global warming",
+            "Look for best laptops under 50k",
+            "Give info about spaceX",
+            "Start a timer for one hour",
+            "Explain the concept of blockchain",
+            "Search who won the 2011 world cup",
+            "What is Newton’s third law?"
+        ],
+        "output": "model2"
+    }
 ]

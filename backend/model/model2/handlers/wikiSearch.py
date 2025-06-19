@@ -1,7 +1,10 @@
 def wikiSearch(query):
     import wikipedia as wiki
     try:
-        summary = wiki.summary(query, sentences = 2)
+        search = wiki.search(query)[0]
+        summary = wiki.summary(search, sentences=2)
+        if not summary:
+            return "No summary available for the search result."
         return summary
     except wiki.exceptions.DisambiguationError as e:
         return  f"I am confused. It has several meanings like {e.options[:5]}. Please specify"

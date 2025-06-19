@@ -24,7 +24,7 @@ def execDynamicCMD(cmd):
   if intent == "search":
       googleSearch(term)
   elif intent == "wiki":
-      res = wikiSearch(term)
+      res = wikiSearch(cmd)
   else:
       res = "I'm Sorry, I can't find any relevant information or perform any action on your given command. Try be more specific"
   return res
