@@ -45,5 +45,20 @@
             "What is Newton’s third law?"
         ],
         "output": "model2"
+    },
+    {
+        "input": [
+            "Open the file <file>",
+            "Delete the folder <folder>",
+            "Create a new file called <file>",
+            "Rename <file> to <file>",
+            "Move <file> to <folder>",
+            "Copy the folder <folder> to <folder>",
+            "Search for <file> in my computer",
+            "Show all files in <folder>",
+            "List files inside <folder>",
+            "Where is <file> located"
+        ],
+        "output": "model3"
     }
 ]

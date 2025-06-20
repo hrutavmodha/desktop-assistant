@@ -11,3 +11,11 @@ def getModel(query):
     vectorizer = load("backend/model/model4/vectorizer4.pkl")
     query_vec = vectorizer.transform([query.lower()])
     return model.predict(query_vec)[0]
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) > 1:
+        query = sys.argv[1]
+        result = getModel(query)
+        print(result)
+    else:
+        print("Please provide a query as a command line argument.")
