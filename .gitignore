@@ -5,3 +5,4 @@ dist/
 executables/
 __pycache__
 temp/
+memory.txt
